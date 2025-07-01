@@ -1,0 +1,85 @@
+/*---------------------------------------------------------
+                        CARD CSS
+-------------------------------------------------------- */
+a {
+    text-decoration: none;
+}
+.card-holder {
+    display: flex;
+    gap: 20px;
+}
+
+
+.card {
+    width: 270px;
+    border-radius: 20px;
+    background: #141414;
+    padding: 5px;
+    overflow: hidden;
+    font-style: normal;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 20px 0px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 380px;
+    @media screen and (max-width:500px) {
+        width:350px;
+    }
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card .top-section {
+    height: 180px;
+    padding-top: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #ffffff 0%, #ff9400 100%);
+    position: relative;
+}
+.headNum{
+    display: block;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.subtext{
+    font-size: 12px;
+    font-weight: bold;
+}
+.card .bottom-section {
+    margin-top: 15px;
+    padding: 10px 5px;
+}
+.card .bottom-section .title {
+    display: block;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.card .bottom-section .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.card .bottom-section .row .item {
+    flex: 30%;
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+}
+.card .bottom-section .row .item .big-text {
+
+    font-size: 12px;
+    display: block;
+}
+.card .bottom-section .row .item .regular-text {
+    font-size: 9px;
+}
+.card .bottom-section .row .item:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, 0.126);
+    border-right: 1px solid rgba(255, 255, 255, 0.126);
+}

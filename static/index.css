@@ -1,0 +1,560 @@
+:root{
+    --colour1 : #f25100;
+    --colour2 : #ff4d00;
+    --colour3 : #FFFFFF;
+}
+
+body{
+    overflow: hidden;
+}
+/*-------------------------------------------------------*/
+.buttonMain {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 4px solid #ff4d00;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    background-color: #ff4d00;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+.buttonMain:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    z-index: -1;
+}
+.buttonMain:hover, .buttonMain:focus {
+    color: #000000;
+    background-color: white;
+    border-radius: 10px;
+}
+.buttonMain:hover:before, .buttonMain:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: 20px;
+}
+.buttonMain:active {
+    transform: scale(0.8);
+    border-radius: 10px;
+}
+
+body{
+    background-color: var(--colour1);
+}
+.bgBlock{
+    background-color: #451806;
+    height: 100vh;
+    width:50vw;
+    margin-left: 50%;
+}
+@media only screen and (max-width: 600px) {
+    .bgBlock{
+        width:100vw;
+        margin-left:0;
+    }
+}
+.header{
+    background: linear-gradient(95deg, #000000 10%, #ff5e00 100%) !important;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF;
+    padding-top: 20px;
+    z-index: 5;
+    border-bottom: 5px solid whitesmoke;
+    font-size: 24px;
+}
+#logo{
+    margin-top: 10px;
+    height: 70px;
+    width: 256px;
+    position: absolute;
+    left: 15px;
+}
+/*------------------------------------------------------*/
+.headerButton {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2px 2px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: white;
+}
+.headerButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.headerButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.headerButton::after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.headerButton::after {
+    background-color: whitesmoke;
+}
+.headerButton:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+/*------------------------------------------------------*/
+#backButton{
+    height: 70px;
+    width: 70px;
+    right: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("icons/homeButton.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+@media screen and (max-width: 600px) {
+    #backButton{
+        width: 60px;
+        height: 65px;
+        right: 10px;
+    }
+}
+.swal-modal{
+    max-width: 80vw;
+    z-index: 7;
+}
+.swal-button{
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--colour2);
+    font-size: 16px;
+}
+.swal-title{
+    color: black;
+}
+.swal-text{
+    color: #00006c;
+}
+.swal-overlay{
+    background-color: rgb(25,25, 112,70%);
+}
+
+.logoSection{
+    background-color: #ffffff;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+    position: absolute;
+    top: 51%;
+    padding: 25px;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 600px) {
+    .logoSection{
+        display: none;;
+    }
+}
+.loginSection{
+    width: 38vw;
+    height: 70vh;
+    background: var(--colour3);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    top: 51%;
+    transform: translate(-50%, -50%);
+    left:75%;
+}
+@media only screen and (max-width: 600px) {
+    .loginSection {
+        width: 90vw;
+        height:65vh;
+        left:50%;
+    }
+}
+
+.loginText{
+    padding-top: 3vh;
+    text-align: center;
+    position: inherit;
+    left: 50%;
+    margin-bottom: 25px;
+}
+.note{
+    position: relative;
+    left:10%;
+}
+.loginForm{
+    width: 100%;
+    height: 100%;
+}
+
+.inputField {
+    display: block;
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--colour2);
+    border-radius: 5px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width: 600px) {
+    .inputField {
+        padding: 5px;
+        margin-bottom: 8px;
+    }
+}
+
+#signupButton{
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    width: 70%;
+    font-size: 16px;
+}
+
+#getportal{
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+    margin-right: 35px;
+}
+@media only screen and (max-width: 600px) {
+    #getportal{
+        font-size: 12px;
+    }
+}
+.buttonWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.troubleshootText{
+    color: var(--colour2);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 40px;
+
+}
+
+.logoImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logoBox{
+    width: 90%;
+    height: 95%;
+    top:2.5%;
+    left: 7%;
+    position: relative;
+    align-items: center;
+}
+
+/*------------------------------------------------------------
+                     FOOTER - SECTION
+------------------------------------------------------------*/
+.footer{
+    align-content: center;
+    text-align: center;
+    background: linear-gradient(95deg, #481201 10%, #ff5e00 100%) !important;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 5px solid whitesmoke;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+/*---------------------------------------------------------*/
+#orglogo{
+    height: 45px;
+    width: 100px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+@media screen and (max-width: 600px) {
+    #orglogo{
+        height: 45px;
+        width: 100px;
+    }
+}
+/*------------------------------------------------------------*/
+#social{
+    display: flex;
+    height: 70px;
+    bottom: 0;
+    justify-content: flex-end;
+    position: relative;
+    top: 20%;
+}
+.socialButton{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 40px;
+    width: 50px;
+    right: 10px;
+}
+.socialImg{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+@media screen and (max-width: 600px) {
+    .socialImg{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+/*---------------------------------------------------------*/
+
+.range {
+    position: relative;
+    height: 50px;
+    width: 80%;
+    left:10%;
+    background: #fff;
+    color: #000000;
+    border-radius: 10px;
+    padding: 0 65px 0 45px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.84);
+    accent-color: #f25100;
+}
+.range .sliderValue {
+    position: relative;
+    width: 100%;
+}
+.range .sliderValue span {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    transform: translateX(-70%) scale(0);
+    font-weight: 500;
+    top: -40px;
+    line-height: 55px;
+    z-index: 2;
+    color: #fff;
+    transform-origin: bottom;
+    transition: transform 0.3s ease-in-out;
+}
+.range .sliderValue span.show {
+    transform: translateX(-70%) scale(1);
+}
+.range .sliderValue span.show:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ff561e;
+    border: 3px solid #fff;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-bottom-left-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.range .field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+.range .field .value {
+    position: absolute;
+    font-size: 18px;
+    color: #ec6b07;
+    font-weight: 600;
+}
+.range .field .value.left {
+    left: -22px;
+}
+.range .field .value.right {
+    right: -43px;
+}
+.range input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    z-index: 2222;
+}
+.range input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #f28209;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range input::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff6f00;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.range input::-moz-range-progress {
+    background: #ff8400;
+}
+
+
+.resultCards{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 20%;
+    -ms-flex-align:center;
+    justify-content: center;
+}
+@media screen and (max-width:500px) {
+    .resultCards{
+        width:80%;
+    }
+}
+
+.noteResult{
+    position: inherit;
+    width: 100%;
+    height: 80%;
+    padding-top: 110px;
+    padding-bottom: 20px;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    color: #ddd;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.buttonResult {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    position: inherit;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 4px solid #f9f6f5;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    background-color: #f9f6f5;
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+.buttonResult:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    z-index: -1;
+}
+.buttonResult:hover, .buttonResult:focus {
+    color: #000000;
+    background-color: white;
+    border-radius: 10px;
+    border-color: #000000;
+}
+.buttonResult:hover:before, .buttonResult:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: 20px;
+}
+.buttonResult:active {
+    transform: scale(0.8);
+    border-radius: 10px;
+}
+
+#resultButton{
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.buttonWrapresult {
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+#objectiveInvestment{
+    display: none;
+    visibility: hidden;
+}
